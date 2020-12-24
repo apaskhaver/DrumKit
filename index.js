@@ -1,5 +1,18 @@
 document.addEventListener("keydown", function (e) {
   playSound(e.key);
+
+  var index = 0;
+
+  for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
+    if (document.querySelectorAll(".drum")[i].textContent === e.key) {
+      index = i;
+    }
+  }
+
+  document.querySelectorAll(".drum")[index].style.color = "white";
+
+  setTimeout(() => {document.querySelectorAll(".drum")[index].style.color = "#DA0463";}, 200);
+
 });
 
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
