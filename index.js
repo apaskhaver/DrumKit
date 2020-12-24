@@ -6,7 +6,10 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
     this.style.color = "white";
 
+    setTimeout(() => {this.style.color = "#DA0463";}, 200);
+
     playSound(this.textContent);
+
   });
 }
 
